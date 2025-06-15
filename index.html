@@ -11,6 +11,8 @@
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="./main.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -20,10 +22,10 @@
       <nav>
         <a href="#" class="logo">Trading<span>Tech</span></a>
         <div class="nav-links">
-          <a href="#">Features</a>
+          <a href="#features">Features</a>
           <a href="#">Signals</a>
           <a href="#pricing">Pricing</a>
-          <a href="#">Resources</a>
+          
         </div>
         <!-- <a href="#" class="cta-button">Get Early Access</a> -->
       </nav>
@@ -77,7 +79,7 @@
           </ul>
           <a href="#" class="cta-button">Get Started</a>
         </div>
- 
+
 
 
         <!-- Elite Tier -->
@@ -85,8 +87,8 @@
           <h3 class="tier-name">3 Months Access</h3>
           <div class="tier-price">$ 149</div>
           <ul class="tier-features">
-           <li>Same as monthly</li>
-           <li>2400+ Overall Pips</li>
+            <li>Same as monthly</li>
+            <li>2400+ Overall Pips</li>
           </ul>
           <a href="#" class="cta-button tier-button">Join Elite</a>
         </div>
@@ -95,11 +97,17 @@
   </section>
 
   <!-- How It Works Section -->
-  <section class="how-it-works">
+  <section class="how-it-works" id="features">
     <div class="container">
       <div class="section-header">
-        <h2>How Trading Tech Works</h2>
-        <p>Our three-step process makes profitable trading accessible to everyone, regardless of experience level.</p>
+        <h2>Explore our Advantages</h2>
+        <p>Trading Tech provides you with precise, high accuracy signals backed by expert analysis, with a 85% success
+          rate. We deliver expert-driven entries, stop losses and targets, so you never second-guess a trade.
+
+          Get instant alerts straight to your phone, so you are always ahead of the market.
+
+          Trade like a pro, with signals that makes profits, not excuses.
+        </p>
       </div>
 
       <div class="steps-container">
@@ -130,12 +138,46 @@
   <section class="results">
     <div class="container">
       <div class="section-header">
-        <h2>Recent Signal Performance</h2>
+        <h2>Frequently Asked Questions</h2>
         <p>See how our signals have performed in live market conditions. Past performance is not indicative of future
-          results.</p>
+          results.</p><br/><br/>
+        <button class="accordion">
+          <h4>
+            How accurate are your Trading Signals?
+          </h4>
+        </button>
+        <div class="panel">
+          <p>Our signals have a proven 85%+ success rate, backed by real-time market analysis and expert curation. Every trade recommendation goes through a rigorous review to ensure you're getting signals that are smart , not speculative.</p>
+        </div>
+
+        <button class="accordion">
+          <h4>
+            How will I receive the signals?
+          </h4>
+        </button>
+        <div class="panel">
+          <p>You’ll receive signals via Telegram for instant access and email notifications for added convenience. We make sure you're always in the loop — whether you're on your phone or desktop.</p>
+        </div>
+
+        <button class="accordion">
+          <h4>
+            What kind of trades do you send signals for?
+          </h4>
+        </button>
+        <div class="panel">
+          <p>We specialize in short to medium-term trades across major indices, forex pairs, and blue-chip stocks. Our goal is to deliver clean, actionable setups — no confusing charts or overcomplicated strategies.</p>
+        </div>
+        <button class="accordion">
+          <h4>
+            Why should I trust Trading Tech over other Signal providers?
+          </h4>
+        </button>
+        <div class="panel">
+          <p>We combine AI-driven analytics with human expertise, giving you the best of both worlds. Unlike random Telegram groups, Trading Tech is transparent, performance-tracked, and risk-aware — focused on long-term profitability, not hype.</p>
+        </div>
       </div>
 
-      <div class="results-carousel">
+      <!-- <div class="results-carousel">
         <div class="result-card">
           <div class="result-meta">
             <span>BTC/USD</span>
@@ -171,7 +213,7 @@
           <div class="result-chart"></div>
           <p>Forex signal capitalized on ECB news event with precise entry and exit timing.</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -199,10 +241,10 @@
           <a href="#" class="footer-logo">Trading<span>Tech</span></a>
           <p>Cutting-edge finance made simple and smart. AI-powered trading signals for the modern investor.</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-discord"></i></a>
-            <a href="#"><i class="fab fa-telegram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-telegram"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
           </div>
         </div>
 
@@ -240,6 +282,7 @@
       </div>
 
       <div class="footer-bottom">
+        <a href="" style="color: rgba(211, 211, 211, 0.7);">Terms and Conditions</a>
         <p>&copy; 2024 Trading Tech. All rights reserved. Past performance is not indicative of future results.</p>
       </div>
     </div>
@@ -266,6 +309,24 @@
       });
     });
   </script>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+
 </body>
 
 </html>

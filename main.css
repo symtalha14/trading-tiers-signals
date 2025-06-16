@@ -4,6 +4,7 @@
     --brand-red: #eb0007;
     --brand-red-opacity: #fc222a2f;
     --brand-green: #27ec09;
+    --brand-green2: #74e463;
     --violet: #6F42C1;
     --white: #FFFFFF;
     --light-gray: #D3D3D3;
@@ -776,4 +777,51 @@ footer {
     font-size: 1.1rem;
     color: rgb(245, 245, 245);
     text-align: left;
+}
+
+
+.modal{
+    position: fixed;
+    z-index: 2;
+    width: 50%;
+    height: fit-content;
+    border-radius: 10px;
+    background-color: var(--brand-green2);
+    padding: 15px;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,0);
+    color: black;
+    display: none;
+}
+
+.modal p::-webkit-scrollbar,
+.modal p::-webkit-scrollbar-button{
+    display: none;
+}
+.modal div p{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-height: 350px;
+    width: 95%;
+    text-align: justify;
+    margin-left: 2.5%;
+    overflow-y: scroll;
+    line-height: 1.05em;
+    font-family: sans-serif;
+}
+
+.modal button{
+    background: black;
+    font-family: "Orbitron", sans-serif;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 2%;
+    letter-spacing: 0.11cap;
 }

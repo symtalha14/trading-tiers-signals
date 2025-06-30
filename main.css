@@ -135,14 +135,26 @@ nav div a {
     /* box-shadow: 0 0 15px rgba(0, 191, 255, 0.5); */
     text-decoration: none;
     display: inline-block;
+    width: 100%;
+    text-align: center;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+label:has(input[type="radio"]:checked) {
     transform: translateY(-2px);
     box-shadow: 0 0 20px var(--brand-red);
     background: var(--brand-green);
     color: black;
+    transition: all .4s ease-in-out;
+    font-weight: bolder;
+    letter-spacing: 0.1cap;
 }
+
+label:has(input[type="radio"]:checked){
+    box-shadow: 0 0 6px var(--brand-red);
+    font-weight: bolder;
+}
+
 
 /* Hero Section */
 .hero {
@@ -268,6 +280,8 @@ nav div a {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    padding-bottom: 60px;
+    
 }
 
 .tier-card::before {
@@ -553,6 +567,7 @@ footer {
     color: var(--white);
     margin-bottom: 20px;
     display: block;
+    text-decoration: none;
 }
 
 .footer-logo span {
@@ -592,6 +607,8 @@ footer {
 .social-links {
     display: flex;
     gap: 15px;
+  width: 100%;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -824,4 +841,128 @@ footer {
     margin-left: 2.5%;
     margin-top: 2%;
     letter-spacing: 0.11cap;
+}
+
+.close-btn{
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+}
+
+.close-btn:hover{
+    cursor: pointer;
+}
+
+#continue{
+    display: none;
+}
+
+.footer-custom-links {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: flex-start;
+    max-width: 70%;
+}
+
+.footer-custom-links li {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(151, 150, 150, 0.08);
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #ffffff24;
+    margin-bottom: 7px;
+    grid-template-columns: 25fr 75fr;
+}
+
+.footer-custom-links li:hover{
+    background: rgba(151, 150, 150, 0.317);
+}
+
+.footer-custom-links li h4{
+    width: 100%;
+}
+
+.footer-custom-links li a{
+    color: lightgray;
+    text-align: left;
+    width: 100%;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:786px){
+    .footer-custom-links li{
+        max-width: 100%;
+        grid-template-columns: 100fr;
+        width: 100%;
+    }
+    .footer-custom-links{
+        max-width: 100%;
+    }
+    input{
+        border-radius: 0px !important;
+    }
+}
+
+.whatsapp-icon{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: var(--brand-green2);
+    place-content: center;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px lightgray;
+    position: fixed;
+    bottom: 2.5%;
+    right: 2.5%;
+    z-index: 2;
+
+}
+
+.whatsapp-icon:hover,
+.telegram-icon:hover{
+    transition: all .5s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.whatsapp-icon span{
+    color: white;
+    font-size: 2rem;
+}
+
+input{
+    border-radius: 5px;
+    padding: 20px 16px;
+    font-size: 1.1rem;
+}
+
+.telegram-icon{
+    color: white !important;
+    background: rgb(68, 177, 255);
+    bottom: 12.5%;
+    position: fixed;
+    right: 2.5%;
+     display: flex;
+    width: 50px;
+    height: 50px;
+    place-content: center;
+     border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px lightgray;
+    z-index: 2;
+}
+
+.telegram-icon span{
+    font-size: 2rem;
+    color: white;
 }
